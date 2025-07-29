@@ -14,7 +14,7 @@ class MyExampleApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('Image Gallery Example')),
         body: Center(
-          child: UIImagePreview(
+          child: ImageGalleryViewer(
             images: const [
               'https://picsum.photos/id/1011/600/400',
               'https://picsum.photos/id/1015/600/400',

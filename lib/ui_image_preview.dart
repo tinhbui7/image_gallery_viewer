@@ -2,8 +2,8 @@ import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:image_gallery_viewer/image_gallery_viewer.dart';
 
-class UIImagePreview extends StatefulWidget {
-  const UIImagePreview({
+class ImageGalleryViewer extends StatefulWidget {
+  const ImageGalleryViewer({
     super.key,
     required this.images,
     this.forcusIndex = 0,
@@ -19,10 +19,10 @@ class UIImagePreview extends StatefulWidget {
   final Function(String url)? onDownload;
 
   @override
-  State<UIImagePreview> createState() => _UIImagePreviewState();
+  State<ImageGalleryViewer> createState() => _ImageGalleryViewerState();
 }
 
-class _UIImagePreviewState extends State<UIImagePreview> {
+class _ImageGalleryViewerState extends State<ImageGalleryViewer> {
   late final PageController _pageController;
 
   final slidePagekey = GlobalKey<ExtendedImageSlidePageState>();

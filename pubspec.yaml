@@ -57,3 +57,7 @@ flutter:
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/to/font-from-package
+
+screenshots:
+  - description: 'Main UI showing selected image and thumbnails'
+    path: screenshots/screenshot1.png
