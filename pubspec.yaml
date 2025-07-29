@@ -1,6 +1,6 @@
 name: image_gallery_viewer
 description: A Flutter widget to display a main image with small image indicators below.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/tinhbui7/image_gallery_viewer
 repository: https://github.com/tinhbui7/image_gallery_viewer
 
