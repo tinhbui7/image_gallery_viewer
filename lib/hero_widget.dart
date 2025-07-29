@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 /// make hero better when slide out
 class HeroWidget extends StatefulWidget {
   const HeroWidget({
-    Key? key,
+    super.key,
     required this.child,
     required this.tag,
     required this.slidePagekey,
     this.slideType = SlideType.onlyImage,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final SlideType slideType;
@@ -40,15 +40,18 @@ class _HeroWidgetState extends State<HeroWidget> {
         BuildContext toHeroContext,
       ) {
         // make hero more smoothly
-        final hero = (flightDirection == HeroFlightDirection.pop
-            ? fromHeroContext.widget
-            : toHeroContext.widget) as Hero;
+        final hero =
+            (flightDirection == HeroFlightDirection.pop
+                    ? fromHeroContext.widget
+                    : toHeroContext.widget)
+                as Hero;
         if (_rectTween == null) {
           return hero;
         }
 
         if (flightDirection == HeroFlightDirection.pop) {
-          final fixTransform = widget.slideType == SlideType.onlyImage &&
+          final fixTransform =
+              widget.slideType == SlideType.onlyImage &&
               (widget.slidePagekey.currentState!.offset != Offset.zero ||
                   widget.slidePagekey.currentState!.scale != 1.0);
 

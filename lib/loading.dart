@@ -4,8 +4,7 @@ class UILoading extends StatelessWidget {
   final Brightness? brightness;
   final double radius;
 
-  const UILoading({Key? key, this.brightness, this.radius = 15})
-    : super(key: key);
+  const UILoading({super.key, this.brightness, this.radius = 15});
 
   @override
   Widget build(BuildContext context) {

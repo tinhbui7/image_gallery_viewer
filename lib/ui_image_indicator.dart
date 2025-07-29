@@ -62,12 +62,12 @@ class _UIImageIndicatorState extends State<UIImageIndicator> {
           final isSelected = index == _currentPage;
           final size = isSelected ? indicatorHeight : _imageHeight;
 
-          var _boderColor = Colors.transparent;
-          List<BoxShadow>? _boxShadow;
-          var _fillColor = Colors.white24;
+          var boderColor = Colors.transparent;
+          List<BoxShadow>? boxShadow;
+          var fillColor = Colors.white24;
           if (isSelected) {
-            _boderColor = Colors.white;
-            _boxShadow = [
+            boderColor = Colors.white;
+            boxShadow = [
               const BoxShadow(
                 color: Color(0x29000000),
                 offset: Offset(0, 4),
@@ -75,7 +75,7 @@ class _UIImageIndicatorState extends State<UIImageIndicator> {
                 spreadRadius: 0,
               ),
             ];
-            _fillColor = Colors.transparent;
+            fillColor = Colors.transparent;
           }
 
           return GestureDetector(
@@ -86,9 +86,9 @@ class _UIImageIndicatorState extends State<UIImageIndicator> {
                 width: size,
                 height: size,
                 decoration: BoxDecoration(
-                  border: Border.all(color: _boderColor, width: 2.0),
+                  border: Border.all(color: boderColor, width: 2.0),
                   borderRadius: BorderRadius.circular(8.0),
-                  boxShadow: _boxShadow,
+                  boxShadow: boxShadow,
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6.0),
@@ -100,7 +100,7 @@ class _UIImageIndicatorState extends State<UIImageIndicator> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      Positioned.fill(child: ColoredBox(color: _fillColor)),
+                      Positioned.fill(child: ColoredBox(color: fillColor)),
                     ],
                   ),
                 ),

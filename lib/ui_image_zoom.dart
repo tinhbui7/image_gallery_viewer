@@ -5,13 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:image_gallery_viewer/image_gallery_viewer.dart';
 import 'package:image_gallery_viewer/loading.dart';
 
-import 'ui_image_error.dart';
-
 class UIImageZoom extends StatefulWidget {
   final String url;
   final BoxFit? fit;
 
-  const UIImageZoom({Key? key, required this.url, this.fit}) : super(key: key);
+  const UIImageZoom({super.key, required this.url, this.fit});
 
   @override
   State<UIImageZoom> createState() => _UIImageZoomState();
