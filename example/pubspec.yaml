@@ -1,0 +1,12 @@
+name: image_gallery_viewer_example
+description: Example app for image_gallery_viewer package.
+publish_to: 'none'
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image_gallery_viewer:
+    path: ../
